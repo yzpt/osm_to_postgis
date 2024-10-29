@@ -54,6 +54,11 @@ sudo nano /etc/postgresql/14/main/pg_hba.conf
 # Restart PostgreSQL to apply changes
 sudo systemctl restart postgresql
 
-
+rm -rf .git
 git init
 git add .
+git branch -M main
+git commit -m "first commit"
+gh repo create osm_to_postgis --public
+git remote add origin https://github.com/yzpt/osm_to_postgis.git
+git push -u origin main
