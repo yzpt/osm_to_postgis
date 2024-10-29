@@ -62,3 +62,11 @@ git commit -m "first commit"
 gh repo create osm_to_postgis --public
 git remote add origin https://github.com/yzpt/osm_to_postgis.git
 git push -u origin main
+
+
+
+pip install pdfkit
+sudo apt-get install wkhtmltopdf
+sudo apt-get install pandoc
+sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic
+jupyter nbconvert --to pdf 1.0_draft.ipynb
